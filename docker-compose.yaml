@@ -1,9 +1,12 @@
 version: '3.8'
 services:
+  #React App Service
   react-app:
     image: pihix/frontend-voiture:1.0
     ports:
       - "3000:3000"
+
+  # Spring Boot App Service
   spring-app:
     image: pihix/backend-voiture:1.0
     ports:
@@ -12,6 +15,8 @@ services:
       - mysql
     networks:
       - my-network
+
+  # MySQL Service
   mysql:
     image: mysql
     environment:
