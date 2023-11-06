@@ -10,7 +10,6 @@ Ce projet est une application Full Stack qui se compose d'un backend Spring Boot
    - Pour générer l'image Docker pour le backend, nous avons utilisé un Dockerfile. Assurez-vous que le Dockerfile est correctement configuré pour votre application Spring Boot.
    - Exécutez la commande suivante dans le répertoire contenant le Dockerfile :
      ```bash
-     cd src/main/webapp/reactjs
      docker build -t backend-voiture:1.0 .
      ```
 
@@ -18,6 +17,7 @@ Ce projet est une application Full Stack qui se compose d'un backend Spring Boot
    - Pour générer l'image Docker pour le frontend React, assurez-vous que le Dockerfile est correctement configuré pour votre application React.
    - Exécutez la commande suivante dans le répertoire contenant le Dockerfile :
      ```bash
+     cd src/main/webapp/reactjs
      docker build -t frontend-voiture:1.0 .
      ```
 
