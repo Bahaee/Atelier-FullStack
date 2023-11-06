@@ -27,3 +27,19 @@ Nous utilisons une image MySQL provenant de Docker Hub. Vous pouvez la tirer en 
 
 ```bash
 docker pull mysql
+```
+
+### Docker Compose
+
+Nous utilisons Docker Compose pour connecter les services et les exécuter dans un environnement global. Le fichier docker-compose.yml définit les services, les réseaux et les commandes d'exécution. Assurez-vous que le fichier docker-compose.yml est correctement configuré.
+
+### Exécution de l'Application
+
+Pour exécuter l'application, utilisez la commande suivante dans le répertoire contenant le fichier docker-compose.yml :
+
+```bash
+docker-compose up
+```
+
+##Cela démarrera tous les services (backend, frontend, et MySQL) et les connectera dans un réseau Docker.
+##L'application sera disponible à l'adresse du frontend (par défaut : http://localhost:3000) une fois que tout est démarré.
