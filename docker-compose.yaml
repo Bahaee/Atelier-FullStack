@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  react-app:
+    image: pihix/frontend-voiture:1.0
+    ports:
+      - "3000:3000"
+  spring-app:
+    image: pihix/backend-voiture:1.0
+    ports:
+      - "8081:8080"
+    depends_on:
+      - mysql
+    networks:
+      - my-network
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: fullstack
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+    ports:
+      - "3308:3306"
+    networks:
+      - my-network
+
+networks:
+  my-network:
